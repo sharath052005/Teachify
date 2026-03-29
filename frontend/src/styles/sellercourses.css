@@ -1,0 +1,131 @@
+.seller-courses-page {
+  padding-top: 90px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background: var(--bg-subtle);
+}
+
+.sc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sc-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+
+.sc-header p { font-size: 0.875rem; color: var(--text-muted); }
+
+.sc-list { display: flex; flex-direction: column; gap: 16px; }
+
+.sc-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: var(--transition);
+}
+
+.sc-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #d0d0ff;
+}
+
+.sc-card__thumb {
+  width: 80px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: linear-gradient(135deg, #1c1033, #2d1b69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sc-card__thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.sc-card__info { flex: 1; min-width: 0; }
+
+.sc-card__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.sc-card__top h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.sc-card__sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+
+.sc-card__meta {
+  display: flex;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.sc-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.sc-action-btn {
+  padding: 7px 14px !important;
+  font-size: 0.78rem !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.sc-delete-btn {
+  background: none;
+  border: 1.5px solid #fecaca;
+  border-radius: var(--radius-sm);
+  color: #dc2626;
+  padding: 7px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sc-delete-btn:hover { background: #fef2f2; }
+
+.sc-empty {
+  text-align: center;
+  padding: 80px 24px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.sc-empty h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+.sc-empty p { color: var(--text-muted); margin-bottom: 24px; }
+
+@media (max-width: 640px) {
+  .sc-card { flex-direction: column; align-items: flex-start; }
+  .sc-card__actions { flex-wrap: wrap; }
+}
